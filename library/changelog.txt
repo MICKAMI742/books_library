@@ -1,0 +1,9 @@
+[First commit]
+Created classes for the User, Book and Library. Every class is public.
+In Library class, method for creating a new user is implemented.
+In User class, method for showing info about user is fully implemented.
+In Book class, method for showing info about book is fully implemented.
+[Second commit]
+In User class, planned to implement method with user panel.
+In Library class, planned to implement method for adding new book and deleting book.
+In Book class, i don't know what to implement at this moment.
