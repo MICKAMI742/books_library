@@ -7,7 +7,7 @@ public class Library
     static private List<Book> books = new List<Book>();
     static private List<User> users = new List<User>();
 
-    public static void CreateAccount()
+    public void CreateAccount()
     {
         string name = "";
         string surname = "";
@@ -35,7 +35,7 @@ public class Library
             }
         }
         User user = new User(name, email, surname, password);
-        Library.users.Add(user);
+        users.Add(user);
     }
 
     public void ShowUsers()
@@ -51,6 +51,32 @@ public class Library
         foreach (Book book in books)
         {
             Console.WriteLine(book.ShowBookInfo());
+        }
+    }
+
+    public void LogIn()
+    {
+        Console.WriteLine("Enter your email: ");
+        string email = Console.ReadLine();
+        foreach (User user in users)
+        {
+            if (user.email == email) { 
+                Console.WriteLine("Enter your password: ");
+                string password = Console.ReadLine();
+                if (user.password == password)
+                {
+                    user.isLogged = true;
+                    user.UserPanel(user.isLogged);
+                }
+                else
+                {
+                    Console.WriteLine("Wrong password");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Wrong email");
+            }
         }
     }
 }

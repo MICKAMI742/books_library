@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 
 namespace books_library
@@ -7,6 +8,7 @@ namespace books_library
     {
         static void Main(string[] args)
         {
+            // defines which function is going to happen
             bool programState = true;
             while (programState)
             {
@@ -27,14 +29,13 @@ namespace books_library
                         break;
                     case ConsoleKey.D1:
                         Console.WriteLine("You are logged in as library attendant");
+                        myLibrary.LogIn();
                         break;
                     case ConsoleKey.D2:
                         Console.WriteLine("You are logged in as library admin");
-                        myLibrary.ShowBooks();
-                        myLibrary.ShowUsers();
                         break;
                     case ConsoleKey.D3:
-                        Library.CreateAccount();
+                        myLibrary.CreateAccount();
                         break;
                     default:
                         Console.WriteLine("You clicked wrong button");
