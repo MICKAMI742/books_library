@@ -3,11 +3,19 @@ Created classes for the User, Book and Library. Every class is public.
 In Library class, method for creating a new user is implemented.
 In User class, method for showing info about user is fully implemented.
 In Book class, method for showing info about book is fully implemented.
+
 [Second commit]
 In User class, implemented method with user panel.
 In Library class, implemented Creating and loging in to user account.
 Changed some hermetization key words in whole project.
 
+[Third commit]
+In Library class, implemented adding new book to library and deleting books from library.
+
+
 [TODO]
-In Library class, planned to implement method for adding new book and deleting book
 In Book class, i don't know what to implement at this moment.
+For User class implement admin panel.
+Think about implementing borrowing and returning methods, in which class they should be implemented.
+Implementing methods for searching books by title, author, category, etc.
+We will see what will be next.

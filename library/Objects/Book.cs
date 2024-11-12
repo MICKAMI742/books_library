@@ -44,6 +44,6 @@ public class Book
 
     public string ShowBookInfo()
     {
-        return ID + " "+ title + " " + author + " " + genre + " " + isBorrowed;
+        return ID + " " + title + " " + author + " " + genre + " " + isBorrowed;
     }
 }

@@ -78,8 +78,8 @@
         }
     }
 
-    public void AdminPanel()
+    public void AdminPanel(bool isLogged)
     {
-        Console.WriteLine();   
+        Console.WriteLine("Welcome to admin panel :)");   
     }
 }
