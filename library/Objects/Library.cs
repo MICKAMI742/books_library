@@ -3,6 +3,13 @@
     static private List<Book> books = new List<Book>();
     static private List<User> users = new List<User>();
 
+    public Library()
+    {
+        User admin = new User("admin", "admin", "admin", "admin");
+        admin.isAdmin = true;
+        users.Add(admin);
+    }
+
     public void CreateAccount()
     {
         string name = "";
@@ -50,7 +57,7 @@
         }
     }
 
-    public void LogIn()
+    public bool LogIn(Library myLibrary)
     {
         Console.WriteLine("Enter your email: ");
         string email = Console.ReadLine();
@@ -68,18 +75,19 @@
                         Console.Clear();
                         user.UserPanel(user.isLogged);
                     }
-                    user.AdminPanel(user.isLogged);
+                    user.AdminPanel(user.isLogged, myLibrary);
+                    break;
                 }
                 else
                 {
                     Console.WriteLine("Wrong password");
+                    System.Threading.Thread.Sleep(2000);
+                    return false;
                 }
             }
-            else
-            {
-                Console.WriteLine("Wrong email");
-            }
         }
+        Console.WriteLine("User not found or you putted wrong email");
+        return false;
     }
 
     public void AddBook()

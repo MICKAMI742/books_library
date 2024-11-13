@@ -12,10 +12,13 @@ Changed some hermetization key words in whole project.
 [Third commit]
 In Library class, implemented adding new book to library and deleting books from library.
 
+[Forth commit]
+For User class implemented Admin panel.
+Corrected login funciton in Library class, because when there was more than one user, it was shwoing that user is not found.
 
 [TODO]
 In Book class, i don't know what to implement at this moment.
-For User class implement admin panel.
 Think about implementing borrowing and returning methods, in which class they should be implemented.
 Implementing methods for searching books by title, author, category, etc.
-We will see what will be next.
+Add some terminating condition to come back to User panel or Admin panel from functions 
+which was called by those intefaces.

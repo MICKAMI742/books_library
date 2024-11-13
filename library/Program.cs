@@ -10,9 +10,9 @@ namespace books_library
         {
             // defines which function is going to happen
             bool programState = true;
+            Library myLibrary = new Library();
             while (programState)
             {
-                Library myLibrary = new Library();
                 Console.WriteLine("Welcome to library\n" +
                     "You need to click expected button to follow the function:\n" +
                     "\tESC - exit the program\n" +
@@ -27,7 +27,7 @@ namespace books_library
                         programState = false;
                         break;
                     case ConsoleKey.D1:
-                        myLibrary.LogIn();
+                        myLibrary.LogIn(myLibrary);
                         break;
                     case ConsoleKey.D2:
                         myLibrary.CreateAccount();

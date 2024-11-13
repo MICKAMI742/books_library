@@ -78,8 +78,39 @@
         }
     }
 
-    public void AdminPanel(bool isLogged)
+    public void AdminPanel(bool isLogged, Library mylibrary)
     {
-        Console.WriteLine("Welcome to admin panel :)");   
+        Console.WriteLine($"Welcome {this.name}\n" +
+             "You need to click expected button to follow the function:\n" +
+             "\tESC - log out\n" +
+             "\t1 - add book\n" +
+             "\t2 - delete book\n" +
+             "\t3 - show users"
+             );
+        ConsoleKey key = Console.ReadKey().Key;
+        Console.Clear();
+        while (isLogged)
+        {
+            switch (key)
+            {
+                case ConsoleKey.Escape:
+                    Console.WriteLine("Logging out...");
+                    System.Threading.Thread.Sleep(3000);
+                    isLogged = false;
+                    break;
+                case ConsoleKey.D1:
+                    mylibrary.AddBook();
+                    break;
+                case ConsoleKey.D2:
+                    mylibrary.DeleteBook();
+                    break;
+                case ConsoleKey.D3:
+                    mylibrary.ShowUsers();
+                    break;
+                default:
+                    Console.WriteLine("You clicked wrong button");
+                    break;
+            }
+        }
     }
 }
